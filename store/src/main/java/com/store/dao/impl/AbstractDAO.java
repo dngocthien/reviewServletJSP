@@ -15,7 +15,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 
 	public Connection getConnection() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/jspservletjdbc";
 			String userName = "root";
 			String password = "18081997";
@@ -119,7 +119,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
-		Long id = null;
+		Long id = 7L;
 
 		try {
 			connection = getConnection();
